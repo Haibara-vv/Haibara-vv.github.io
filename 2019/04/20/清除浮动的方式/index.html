@@ -27,8 +27,8 @@
 <meta property="og:site_name" content="VV&#39;s Blog">
 <meta property="og:description" content="简介：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;在页面布局中常常要使用到浮动来实现元素之间的布局，然而浮动之后常常会出现各种bug。本文记录下来我使用过以及查阅资料总结下来的解决清除浮动的问题的方式，如下：">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-04-20T14:48:18.000Z">
-<meta property="article:modified_time" content="2019-04-21T05:52:31.000Z">
+<meta property="article:published_time" content="2019-04-20T11:18:52.000Z">
+<meta property="article:modified_time" content="2019-04-21T05:32:11.000Z">
 <meta property="article:author" content="VV(刘威)">
 <meta property="article:tag" content="vv的小笔记">
 <meta name="twitter:card" content="summary">
@@ -190,14 +190,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-04-20 22:48:18" itemprop="dateCreated datePublished" datetime="2019-04-20T22:48:18+08:00">2019-04-20</time>
+              <time title="创建时间：2019-04-20 19:18:52" itemprop="dateCreated datePublished" datetime="2019-04-20T19:18:52+08:00">2019-04-20</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-04-21 13:52:31" itemprop="dateModified" datetime="2019-04-21T13:52:31+08:00">2019-04-21</time>
+                <time title="修改时间：2019-04-21 13:32:11" itemprop="dateModified" datetime="2019-04-21T13:32:11+08:00">2019-04-21</time>
               </span>
 
           
@@ -213,7 +213,7 @@
       
         <p><strong>简介：</strong><br>&ensp;&ensp;&ensp;&ensp;在页面布局中常常要使用到浮动来实现元素之间的布局，然而浮动之后常常会出现各种bug。本文记录下来我使用过以及查阅资料总结下来的解决清除浮动的问题的方式，如下：</p>
 <a id="more"></a>
-<h2 id="CSS清除浮动的8种方法以及优缺点"><a href="#CSS清除浮动的8种方法以及优缺点" class="headerlink" title="CSS清除浮动的8种方法以及优缺点"></a>CSS清除浮动的8种方法以及优缺点</h2><h5 id="产生的问题："><a href="#产生的问题：" class="headerlink" title="产生的问题："></a>产生的问题：</h5><p>&ensp;&ensp;&ensp;&ensp;浮动会使当前标签产生向上浮的效果，同时会影响到前后标签、父级标签的位置及 width height 属性。而且同样的代码，在各种浏览器中显示效果也有可能不相同，这样让清除浮动更难了。解决浮动引起的问题有多种方法，但有些方法在浏览器兼容性方面还有问题。 </p>
+<h3 id="CSS清除浮动的8种方法以及优缺点"><a href="#CSS清除浮动的8种方法以及优缺点" class="headerlink" title="CSS清除浮动的8种方法以及优缺点"></a>CSS清除浮动的8种方法以及优缺点</h3><p><strong>产生的问题：</strong><br>&ensp;&ensp;&ensp;&ensp;浮动会使当前标签产生向上浮的效果，同时会影响到前后标签、父级标签的位置及 width height 属性。而且同样的代码，在各种浏览器中显示效果也有可能不相同，这样让清除浮动更难了。解决浮动引起的问题有多种方法，但有些方法在浏览器兼容性方面还有问题。 </p>
 <p><strong>下面总结8种清除浮动的方法</strong> </p>
 <h3 id="1-父级div定义-height"><a href="#1-父级div定义-height" class="headerlink" title="1.父级div定义 height"></a>1.父级div定义 height</h3><pre><code>&lt;style type=&quot;text/css&quot;&gt; 
     .div1{background:#000080;border:1px solid red;/*解决代码*/height:200px;} 
@@ -359,7 +359,10 @@
     <a href="/2019/04/15/%E6%80%BB%E7%BB%93%E5%B8%B8%E7%94%A8%E7%9A%84CSS%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/" rel="prev" title="总结常用的CSS命名规则">
       <i class="fa fa-chevron-left"></i> 总结常用的CSS命名规则
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2019/05/01/%E5%85%83%E7%B4%A0%E5%B1%85%E4%B8%AD%E7%9A%84%E6%96%B9%E5%BC%8F/" rel="next" title="元素居中的方式">
+      元素居中的方式 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -418,7 +421,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS清除浮动的8种方法以及优缺点"><span class="nav-number">1.</span> <span class="nav-text">CSS清除浮动的8种方法以及优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#产生的问题："><span class="nav-number">1.0.0.1.</span> <span class="nav-text">产生的问题：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-父级div定义-height"><span class="nav-number">1.1.</span> <span class="nav-text">1.父级div定义 height</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-结尾处加空div标签-clear-both"><span class="nav-number">1.2.</span> <span class="nav-text">2.结尾处加空div标签 clear:both;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-父级div定义-伪对象-after-和-zoom"><span class="nav-number">1.3.</span> <span class="nav-text">3.父级div定义 伪对象:after 和 zoom</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-父级div定义-overflow-hidden"><span class="nav-number">1.4.</span> <span class="nav-text">4.父级div定义 overflow:hidden</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-父级div定义-overflow-auto"><span class="nav-number">1.5.</span> <span class="nav-text">5.父级div定义 overflow:auto</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-父级div-也一起浮动"><span class="nav-number">1.6.</span> <span class="nav-text">6.父级div 也一起浮动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-父级div定义-display-table"><span class="nav-number">1.7.</span> <span class="nav-text">7.父级div定义 display:table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-结尾处加-br标签-clear-both"><span class="nav-number">1.8.</span> <span class="nav-text">8.结尾处加 br标签 clear:both</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS清除浮动的8种方法以及优缺点"><span class="nav-number">1.</span> <span class="nav-text">CSS清除浮动的8种方法以及优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-父级div定义-height"><span class="nav-number">2.</span> <span class="nav-text">1.父级div定义 height</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-结尾处加空div标签-clear-both"><span class="nav-number">3.</span> <span class="nav-text">2.结尾处加空div标签 clear:both;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-父级div定义-伪对象-after-和-zoom"><span class="nav-number">4.</span> <span class="nav-text">3.父级div定义 伪对象:after 和 zoom</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-父级div定义-overflow-hidden"><span class="nav-number">5.</span> <span class="nav-text">4.父级div定义 overflow:hidden</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-父级div定义-overflow-auto"><span class="nav-number">6.</span> <span class="nav-text">5.父级div定义 overflow:auto</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-父级div-也一起浮动"><span class="nav-number">7.</span> <span class="nav-text">6.父级div 也一起浮动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-父级div定义-display-table"><span class="nav-number">8.</span> <span class="nav-text">7.父级div定义 display:table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-结尾处加-br标签-clear-both"><span class="nav-number">9.</span> <span class="nav-text">8.结尾处加 br标签 clear:both</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -434,12 +437,12 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
