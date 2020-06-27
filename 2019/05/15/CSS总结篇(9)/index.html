@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="简介：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;记录下来在学习css过程中学习到的命名规则。至于为啥要记录呢？毕竟再也不想每次都是box1,box2……深受其害！改起来要死人呀！！！&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;本文包括了注释的写法，id的命名，class的命名以及.css文件的命名。以下就是详细笔记：">
+  <meta name="description" content="简介：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;经过这么长时间的前端学习，现在也在js和jq的学习了，但在最近的项目里常常很多的CSS样式不记得了，于是打算花一晚上总结一下常会用到的CSS样式。虽然W3C School已经都有了，但是想着自己总结一遍印象会更深刻。如下：ps: 篇幅有限，本篇总结了CSS的一些核心属性(再续上篇)，本篇包括：背景相关属性、弹性盒子，动画等。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="总结常用的CSS命名规则">
-<meta property="og:url" content="http://yoursite.com/2019/04/15/%E6%80%BB%E7%BB%93%E5%B8%B8%E7%94%A8%E7%9A%84CSS%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/index.html">
+<meta property="og:title" content="CSS总结篇(9)">
+<meta property="og:url" content="http://yoursite.com/2019/05/15/CSS%E6%80%BB%E7%BB%93%E7%AF%87(9)/index.html">
 <meta property="og:site_name" content="VV&#39;s Blog">
-<meta property="og:description" content="简介：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;记录下来在学习css过程中学习到的命名规则。至于为啥要记录呢？毕竟再也不想每次都是box1,box2……深受其害！改起来要死人呀！！！&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;本文包括了注释的写法，id的命名，class的命名以及.css文件的命名。以下就是详细笔记：">
+<meta property="og:description" content="简介：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;经过这么长时间的前端学习，现在也在js和jq的学习了，但在最近的项目里常常很多的CSS样式不记得了，于是打算花一晚上总结一下常会用到的CSS样式。虽然W3C School已经都有了，但是想着自己总结一遍印象会更深刻。如下：ps: 篇幅有限，本篇总结了CSS的一些核心属性(再续上篇)，本篇包括：背景相关属性、弹性盒子，动画等。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-04-15T14:48:18.000Z">
-<meta property="article:modified_time" content="2019-05-20T05:52:31.000Z">
+<meta property="article:published_time" content="2019-05-15T14:30:24.000Z">
+<meta property="article:modified_time" content="2019-05-15T14:45:54.000Z">
 <meta property="article:author" content="VV(刘威)">
-<meta property="article:tag" content="vv的小笔记">
+<meta property="article:tag" content="vv的小笔记-CSS">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2019/04/15/%E6%80%BB%E7%BB%93%E5%B8%B8%E7%94%A8%E7%9A%84CSS%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/">
+<link rel="canonical" href="http://yoursite.com/2019/05/15/CSS%E6%80%BB%E7%BB%93%E7%AF%87(9)/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>总结常用的CSS命名规则 | VV's Blog</title>
+  <title>CSS总结篇(9) | VV's Blog</title>
   
 
 
@@ -167,7 +167,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/15/%E6%80%BB%E7%BB%93%E5%B8%B8%E7%94%A8%E7%9A%84CSS%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/15/CSS%E6%80%BB%E7%BB%93%E7%AF%87(9)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/vv.jpg">
@@ -180,7 +180,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          总结常用的CSS命名规则
+          CSS总结篇(9)
         </h1>
 
         <div class="post-meta">
@@ -189,16 +189,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2019-04-15 22:48:18" itemprop="dateCreated datePublished" datetime="2019-04-15T22:48:18+08:00">2019-04-15</time>
+              <time title="创建时间：2019-05-15 22:30:24 / 修改时间：22:45:54" itemprop="dateCreated datePublished" datetime="2019-05-15T22:30:24+08:00">2019-05-15</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-05-20 13:52:31" itemprop="dateModified" datetime="2019-05-20T13:52:31+08:00">2019-05-20</time>
-              </span>
 
           
 
@@ -211,75 +205,176 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><strong>简介：</strong><br>&ensp;&ensp;&ensp;&ensp;记录下来在学习css过程中学习到的命名规则。至于为啥要记录呢？毕竟再也不想每次都是box1,box2……深受其害！改起来要死人呀！！！<br>&ensp;&ensp;&ensp;&ensp;本文包括了注释的写法，id的命名，class的命名以及.css文件的命名。以下就是详细笔记：</p>
+        <p><strong>简介：</strong><br>&ensp;&ensp;&ensp;&ensp;经过这么长时间的前端学习，现在也在js和jq的学习了，但在最近的项目里常常很多的CSS样式不记得了，于是打算花一晚上总结一下常会用到的CSS样式。虽然W3C School已经都有了，但是想着自己总结一遍印象会更深刻。如下：<br><strong>ps:</strong> 篇幅有限，本篇总结了CSS的一些核心属性(再续上篇)，本篇包括：背景相关属性、弹性盒子，动画等。</p>
 <a id="more"></a>
-<h2 id="1-注释的写法"><a href="#1-注释的写法" class="headerlink" title="1.注释的写法:"></a>1.注释的写法:</h2><pre><code>/* Footer */   
-内容区    
-/* End Footer */</code></pre><h2 id="2-id的命名"><a href="#2-id的命名" class="headerlink" title="2. id的命名:"></a>2. id的命名:</h2><h3 id="1-页面结构"><a href="#1-页面结构" class="headerlink" title="(1)页面结构"></a>(1)页面结构</h3><pre><code>容器: container 
-页头：header    
-内容：content/container   
-页面主体：main   
-页尾：footer   
-导航：nav
-底部栏：tabbar   
-侧栏：sidebar   
-栏目：column    
-页面外围控制整体布局宽度：wrapper   
-左右中：left right center   </code></pre><h3 id="2-导航"><a href="#2-导航" class="headerlink" title="(2)导航"></a>(2)导航</h3><pre><code>导航：nav    
-主导航：mainbav   
-子导航：subnav   
-顶导航：topnav   
-边导航：sidebar   
-左导航：leftsidebar   
-右导航：rightsidebar   
-菜单：menu    
-子菜单：submenu   
-标题: title    
-摘要: summary   </code></pre><h3 id="3-功能"><a href="#3-功能" class="headerlink" title="(3)功能"></a>(3)功能</h3><pre><code>标志：logo                          
-广告：banner   
-登陆：login                         
-登录条：loginbar   
-注册：regsiter                      
-搜索：search  
-功能区：shop                        
-标题：title    
-加入：joinus                        
-状态：status   
-按钮：btn                           
-滚动：scroll
-标签页：tab                         
-文章列表：list   
-提示信息：msg                       
-当前的: current   
-小技巧：tips                        
-图标: icon   
-注释：note                          
-指南：guild   
-服务：service                       
-热点：hot
-新闻：news                          
-下载：download   
-投票：vote                          
-合作伙伴：partner   
-友情链接：link                      
-版权：copyright   </code></pre><h2 id="3-class的命名"><a href="#3-class的命名" class="headerlink" title="3.class的命名:"></a>3.class的命名:</h2><h3 id="1-颜色-使用颜色的名称或者16进制代码-如"><a href="#1-颜色-使用颜色的名称或者16进制代码-如" class="headerlink" title="(1)颜色:使用颜色的名称或者16进制代码,如"></a>(1)颜色:使用颜色的名称或者16进制代码,如</h3><pre><code>.red { color: red; }   
-.f60 { color: #f60; }   
-.ff8600 { color: #ff8600; }    </code></pre><h3 id="2-字体大小-直接使用“font-字体大小”作为名称-如"><a href="#2-字体大小-直接使用“font-字体大小”作为名称-如" class="headerlink" title="(2)字体大小,直接使用“font+字体大小”作为名称,如"></a>(2)字体大小,直接使用“font+字体大小”作为名称,如</h3><pre><code>.font12px { font-size: 12px; }   
-.font9pt {font-size: 9pt; }   </code></pre><h3 id="3-对齐样式-使用对齐目标的英文名称-如"><a href="#3-对齐样式-使用对齐目标的英文名称-如" class="headerlink" title="(3)对齐样式,使用对齐目标的英文名称,如"></a>(3)对齐样式,使用对齐目标的英文名称,如</h3><pre><code>.left { float:left; }    
-.bottom { float:bottom; }    </code></pre><h3 id="4-标题栏样式-使用“类别-功能”的方式命名-如"><a href="#4-标题栏样式-使用“类别-功能”的方式命名-如" class="headerlink" title="(4)标题栏样式,使用“类别+功能”的方式命名,如"></a>(4)标题栏样式,使用“类别+功能”的方式命名,如</h3><pre><code>.barnews { }   
-.barproduct { } </code></pre><h3 id="5-统筹CSS样式-如"><a href="#5-统筹CSS样式-如" class="headerlink" title="(5)统筹CSS样式,如"></a>(5)统筹CSS样式,如</h3><pre><code>.m10{ margin: 10px; }
-.p10{ padding: 10px; }
-.ml5{ margin-left: 5px; }
-//一般都是px为单位，其他单位只需要在尾部加上单位就好，如：.m10pt{ margin: 10pt; }</code></pre><h2 id="4-常用的-css文件命名"><a href="#4-常用的-css文件命名" class="headerlink" title="4.常用的.css文件命名"></a>4.常用的.css文件命名</h2><pre><code>主要的      master.css   
-模块        module.css   
-基本共用    base.css   
-布局，版面  layout.css   
-主题        themes.css   
-专栏        columns.css   
-文字        font.css   
-表单        forms.css   
-补丁        mend.css   
-打印        print.css</code></pre>
+<p><strong>背景相关属性：</strong></p>
+<pre><code>background-clip:    背景图展示位置    图片必须平铺
+    border-box    边框区域开始展示
+    padding-box    内边距区域开始展示
+    content-box    内容区域开始展示
+
+background-origin:    背景图起始位置
+    border-box    边框区域开始
+    padding-box    内边距区域开始
+    content-box    内容区域开始
+
+background-size:背景图大小;
+    具体px
+        一个值    指定宽度，高度等比例缩放
+        两个值    指定宽高
+
+%
+cover 等比例缩放图片，且充满整个元素，有可能图片超出元素
+contain    等比例缩放图片，首先充满最近的一边，立即停下，图片有可能未充满整个元素
+
+border-image:url(&quot;图片路径&quot;) 图片裁剪的大小 图片的铺放方式;图片边框
+border-image-repeat:铺放方式;
+    repeat
+    round
+    stretch
+
+border-image-slice:图片裁剪;
+border-image-source:url(&quot;图片路径&quot;);
+border-image-width:图片边框的宽度;
+
+颜色：
+    hsl(色调,饱和度%,亮度%)
+        0-360
+        0-1
+        0-1
+
+    hsla(色调,饱和度%,亮度%,透明度)
+        0-360
+        0-1
+        0-1
+        0-1</code></pre><p><strong>弹性盒子</strong></p>
+<pre><code>标准盒模型 :  box-sizing:content-box;
+怪异盒模型 :  box-sizing:border-box;
+    W = w(padding+border) + marging
+    H = h(padding+border) + marging
+
+触发方式：
+丢失&lt;!DOCTYPE html&gt; 在ie6 7 8 下触发
+box-sizing:border-box;</code></pre><p><strong>弹性盒模型</strong></p>
+<pre><code>主轴 侧轴（交叉轴）        
+容器 （父元素）
+    主轴
+    侧轴
+display:flex/inline-flex;
+        特性：子元素的浮动，清除浮动，垂直对齐方式都失效
+            默认水平方向主轴
+            项目的宽高默认由内容撑起来
+            项目的高度默认与容器的高度一致
+            项目默认按照主轴排列
+flex-direction:column/column-reverse/row/row-reverse;
+
+垂直方向/垂直方向且反序/水平方向默认值/水平方向且反序
+
+flex-wrap:nowrap/wrap/wrap-reverse;项目是否换行
+不换行/换行/反序换行
+
+flex-flow:主轴方向 换行;
+
+justify-content:center/flex-start/flex-end/space-around/space-between;
+    居中/起始位置/终点位置/平均分配/两端对齐
+align-items:center;侧轴上居中
+align-items:flex-start;侧轴上的起始位置
+align-items:flex-end;侧轴上的终点位置
+align-items:stretch;默认值
+align-items:baseline;第一行文本底部对齐
+
+align-content:center;多根轴线在侧轴上的对齐方式
+    flex-start    起始位置
+    flex-end    终点位置
+    center        居中
+    stretch        默认值
+    space-around    平均分配
+    space-between   两端对齐
+项目 （子元素）
+order:数值;    定义项目排列顺序
+    默认值为0，数值越大越靠后，数值越小越靠前
+    flex-grow:;项目放大比例，将剩余空间分成等份分给大家
+    flex-shrink:项目缩小比例; 默认值1
+    flex-basis:; = width 项目本身的大小
+        auto 默认值
+    flex:;三个值的综合写法
+
+    align-self:项目在侧轴上的对齐方式;
+        flex-start    起始位置
+        flex-end    终点位置
+        center        居中
+        auto        自适应
+        baseline    第一行文本底部对齐
+        stretch    默认值</code></pre><p><strong>移动端布局</strong></p>
+<pre><code>加meta属性
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no&quot; /&gt;</code></pre><p><strong>媒体查询</strong><br>        响应式布局<br>      流体网格<br>        分栏布局</p>
+<pre><code>column-count:;分栏数
+column-width:;多宽为一列
+column-gap:;栏之间的间距
+column-rule:1px solid red;栏线
+column-span:all/1(默认);分栏标题</code></pre><p><strong>背景渐变</strong><br>默认从上到下的写法</p>
+<pre><code>background:linear-gradient(bule,red);
+background:-webkit-linear-gradient(blue,red);</code></pre><p>设置了渐变角度的写法</p>
+<pre><code>background:-webkit-linear-gradient(right top,red,yellow);
+background:linear-gradient(to left top,blue,red);</code></pre><p>带有角度的写法</p>
+<pre><code>background:linear-gradient(90deg,red,blue);
+background:-webkit-linear-gradient(90deg,red,yellow);
+
+background:linear-gradient(blue 20%,red 50%);
+background:-webkit-linear-gradient(blue 20%,red 50%);</code></pre><p>重复渐变</p>
+<pre><code>background:repeating-linear-gradient(#000 10%,#fff 20%);
+background:-webkit-linear-gradient(red 15%);
+
+background:radial-gradient(orange,red);
+background:-webkit-radial-gradient(orange,bkue,yellow,red,green,#000);
+
+background:radial-gradient(red 15%,yellow 30%,blue 55%);
+background:-webkit-radial-gradient(red 15%,yellow 30%);</code></pre><p>设置了圆的形状 正圆 椭圆</p>
+<pre><code>background:-webkit-radial-gradient(circle,orange,blue,yellow,red,green,#000);
+background:radial-gradient(circle,orange,blue,yellow,red,green,#000);
+
+background:repeating-radial-gradient(red 5%,orange 10%,blue 15%,pink 20%);
+background:-webkit-radial-gradient(#000 5%,blue 10%)</code></pre><p><strong>模糊</strong></p>
+<pre><code>filter:blur(10px);
+filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10,MakeShadow=false); 兼容ie6 7 8 9 </code></pre><p><strong>倒影</strong></p>
+<pre><code>-webkit-box-reflect:above 10px linear-gradient(transparent,#fff);
+-box-reflect:倒影的方向 原图与倒影的距离 倒影是否渐变;
+above 向上
+below 向下
+left  向左
+right 向右
+注意：倒影有渐变，必须有间距</code></pre><p><strong>渐变</strong><br>    transition-property:width;    过渡属性<br>    transition-duration:2s;        过渡时间<br>    transition-timing-function:ease;    运动方式<br>    transition-delay:3s;    延迟时间<br>    transition:;</p>
+<p><strong>动画</strong></p>
+<p>先定义动画</p>
+<pre><code>@keyframes 动画名{
+    from{}
+    to{}
+}</code></pre><p>再调用动画</p>
+<pre><code>animation:动画名 时长 延迟 运动方式 重复次数 是否回播;
+animation-name:name,name2;
+animation-duration:2s;
+animation-delay
+animation-timing-function:linear;
+animation-iteration-count:infinite;
+animatio-direction:alternate;</code></pre><p><strong>转换</strong>        transform</p>
+<pre><code>transform:translate();
+    translateX()
+    translateY()
+
+transform:rotate(90deg);
+
+transform:scale(1.5);    放大缩小
+    允许负值    先缩小到消失再出现
+    绝对值大于1：放大
+    绝对值等于1：不变
+    绝对值小于1：缩小
+
+transform:skew(50deg,50deg);倾斜
+
+transform-origin:;改变元素基点</code></pre><p><strong>3D环境</strong></p>
+<pre><code>transform-style:preserve-3d;提供3D环境 给所有变形元素的父级添加
+perspective:500px;景深
+perspective-origin: 100px 50px;</code></pre>
     </div>
 
     
@@ -304,7 +399,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/04/15/%E6%80%BB%E7%BB%93%E5%B8%B8%E7%94%A8%E7%9A%84CSS%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/" title="总结常用的CSS命名规则">http://yoursite.com/2019/04/15/总结常用的CSS命名规则/</a>
+    <a href="http://yoursite.com/2019/05/15/CSS%E6%80%BB%E7%BB%93%E7%AF%87(9)/" title="CSS总结篇(9)">http://yoursite.com/2019/05/15/CSS总结篇(9)/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -315,7 +410,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/vv%E7%9A%84%E5%B0%8F%E7%AC%94%E8%AE%B0/" rel="tag"># vv的小笔记</a>
+              <a href="/tags/vv%E7%9A%84%E5%B0%8F%E7%AC%94%E8%AE%B0-CSS/" rel="tag"># vv的小笔记-CSS</a>
           </div>
 
         
@@ -323,10 +418,13 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2019/04/20/%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E6%96%B9%E5%BC%8F/" rel="next" title="清除浮动的方式">
-      清除浮动的方式 <i class="fa fa-chevron-right"></i>
+    <a href="/2019/05/15/CSS%E6%80%BB%E7%BB%93%E7%AF%87(8)/" rel="prev" title="CSS总结篇(8)">
+      <i class="fa fa-chevron-left"></i> CSS总结篇(8)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/06/20/http%E5%8D%8F%E8%AE%AE%E7%8A%B6%E6%80%81%E7%A0%81/" rel="next" title="http协议状态码">
+      http协议状态码 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -386,7 +484,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-注释的写法"><span class="nav-number">1.</span> <span class="nav-text">1.注释的写法:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-id的命名"><span class="nav-number">2.</span> <span class="nav-text">2. id的命名:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-页面结构"><span class="nav-number">2.1.</span> <span class="nav-text">(1)页面结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-导航"><span class="nav-number">2.2.</span> <span class="nav-text">(2)导航</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-功能"><span class="nav-number">2.3.</span> <span class="nav-text">(3)功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-class的命名"><span class="nav-number">3.</span> <span class="nav-text">3.class的命名:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-颜色-使用颜色的名称或者16进制代码-如"><span class="nav-number">3.1.</span> <span class="nav-text">(1)颜色:使用颜色的名称或者16进制代码,如</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-字体大小-直接使用“font-字体大小”作为名称-如"><span class="nav-number">3.2.</span> <span class="nav-text">(2)字体大小,直接使用“font+字体大小”作为名称,如</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-对齐样式-使用对齐目标的英文名称-如"><span class="nav-number">3.3.</span> <span class="nav-text">(3)对齐样式,使用对齐目标的英文名称,如</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-标题栏样式-使用“类别-功能”的方式命名-如"><span class="nav-number">3.4.</span> <span class="nav-text">(4)标题栏样式,使用“类别+功能”的方式命名,如</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-统筹CSS样式-如"><span class="nav-number">3.5.</span> <span class="nav-text">(5)统筹CSS样式,如</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-常用的-css文件命名"><span class="nav-number">4.</span> <span class="nav-text">4.常用的.css文件命名</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

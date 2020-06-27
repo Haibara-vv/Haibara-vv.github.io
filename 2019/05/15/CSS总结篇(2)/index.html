@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="简介：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;记录下来在学习css过程中学习到的命名规则。至于为啥要记录呢？毕竟再也不想每次都是box1,box2……深受其害！改起来要死人呀！！！&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;本文包括了注释的写法，id的命名，class的命名以及.css文件的命名。以下就是详细笔记：">
+  <meta name="description" content="简介：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;经过这么长时间的前端学习，现在也在js和jq的学习了，但在最近的项目里常常很多的CSS样式不记得了，于是打算花一晚上总结一下常会用到的CSS样式。虽然W3C School已经都有了，但是想着自己总结一遍印象会更深刻。如下：ps: 篇幅有限，上一篇只总结了各类标签,本篇总结了CSS样式以及CSS选择器和浮动">
 <meta property="og:type" content="article">
-<meta property="og:title" content="总结常用的CSS命名规则">
-<meta property="og:url" content="http://yoursite.com/2019/04/15/%E6%80%BB%E7%BB%93%E5%B8%B8%E7%94%A8%E7%9A%84CSS%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/index.html">
+<meta property="og:title" content="CSS总结篇(2)">
+<meta property="og:url" content="http://yoursite.com/2019/05/15/CSS%E6%80%BB%E7%BB%93%E7%AF%87(2)/index.html">
 <meta property="og:site_name" content="VV&#39;s Blog">
-<meta property="og:description" content="简介：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;记录下来在学习css过程中学习到的命名规则。至于为啥要记录呢？毕竟再也不想每次都是box1,box2……深受其害！改起来要死人呀！！！&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;本文包括了注释的写法，id的命名，class的命名以及.css文件的命名。以下就是详细笔记：">
+<meta property="og:description" content="简介：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;经过这么长时间的前端学习，现在也在js和jq的学习了，但在最近的项目里常常很多的CSS样式不记得了，于是打算花一晚上总结一下常会用到的CSS样式。虽然W3C School已经都有了，但是想着自己总结一遍印象会更深刻。如下：ps: 篇幅有限，上一篇只总结了各类标签,本篇总结了CSS样式以及CSS选择器和浮动">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-04-15T14:48:18.000Z">
-<meta property="article:modified_time" content="2019-05-20T05:52:31.000Z">
+<meta property="article:published_time" content="2019-05-15T13:26:00.000Z">
+<meta property="article:modified_time" content="2019-05-15T13:34:11.000Z">
 <meta property="article:author" content="VV(刘威)">
-<meta property="article:tag" content="vv的小笔记">
+<meta property="article:tag" content="vv的小笔记-CSS">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2019/04/15/%E6%80%BB%E7%BB%93%E5%B8%B8%E7%94%A8%E7%9A%84CSS%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/">
+<link rel="canonical" href="http://yoursite.com/2019/05/15/CSS%E6%80%BB%E7%BB%93%E7%AF%87(2)/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>总结常用的CSS命名规则 | VV's Blog</title>
+  <title>CSS总结篇(2) | VV's Blog</title>
   
 
 
@@ -167,7 +167,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/15/%E6%80%BB%E7%BB%93%E5%B8%B8%E7%94%A8%E7%9A%84CSS%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/15/CSS%E6%80%BB%E7%BB%93%E7%AF%87(2)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/vv.jpg">
@@ -180,7 +180,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          总结常用的CSS命名规则
+          CSS总结篇(2)
         </h1>
 
         <div class="post-meta">
@@ -189,16 +189,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2019-04-15 22:48:18" itemprop="dateCreated datePublished" datetime="2019-04-15T22:48:18+08:00">2019-04-15</time>
+              <time title="创建时间：2019-05-15 21:26:00 / 修改时间：21:34:11" itemprop="dateCreated datePublished" datetime="2019-05-15T21:26:00+08:00">2019-05-15</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-05-20 13:52:31" itemprop="dateModified" datetime="2019-05-20T13:52:31+08:00">2019-05-20</time>
-              </span>
 
           
 
@@ -211,75 +205,39 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><strong>简介：</strong><br>&ensp;&ensp;&ensp;&ensp;记录下来在学习css过程中学习到的命名规则。至于为啥要记录呢？毕竟再也不想每次都是box1,box2……深受其害！改起来要死人呀！！！<br>&ensp;&ensp;&ensp;&ensp;本文包括了注释的写法，id的命名，class的命名以及.css文件的命名。以下就是详细笔记：</p>
+        <p><strong>简介：</strong><br>&ensp;&ensp;&ensp;&ensp;经过这么长时间的前端学习，现在也在js和jq的学习了，但在最近的项目里常常很多的CSS样式不记得了，于是打算花一晚上总结一下常会用到的CSS样式。虽然W3C School已经都有了，但是想着自己总结一遍印象会更深刻。如下：<br><strong>ps:</strong> 篇幅有限，上一篇只总结了各类标签,本篇总结了CSS样式以及CSS选择器和浮动</p>
 <a id="more"></a>
-<h2 id="1-注释的写法"><a href="#1-注释的写法" class="headerlink" title="1.注释的写法:"></a>1.注释的写法:</h2><pre><code>/* Footer */   
-内容区    
-/* End Footer */</code></pre><h2 id="2-id的命名"><a href="#2-id的命名" class="headerlink" title="2. id的命名:"></a>2. id的命名:</h2><h3 id="1-页面结构"><a href="#1-页面结构" class="headerlink" title="(1)页面结构"></a>(1)页面结构</h3><pre><code>容器: container 
-页头：header    
-内容：content/container   
-页面主体：main   
-页尾：footer   
-导航：nav
-底部栏：tabbar   
-侧栏：sidebar   
-栏目：column    
-页面外围控制整体布局宽度：wrapper   
-左右中：left right center   </code></pre><h3 id="2-导航"><a href="#2-导航" class="headerlink" title="(2)导航"></a>(2)导航</h3><pre><code>导航：nav    
-主导航：mainbav   
-子导航：subnav   
-顶导航：topnav   
-边导航：sidebar   
-左导航：leftsidebar   
-右导航：rightsidebar   
-菜单：menu    
-子菜单：submenu   
-标题: title    
-摘要: summary   </code></pre><h3 id="3-功能"><a href="#3-功能" class="headerlink" title="(3)功能"></a>(3)功能</h3><pre><code>标志：logo                          
-广告：banner   
-登陆：login                         
-登录条：loginbar   
-注册：regsiter                      
-搜索：search  
-功能区：shop                        
-标题：title    
-加入：joinus                        
-状态：status   
-按钮：btn                           
-滚动：scroll
-标签页：tab                         
-文章列表：list   
-提示信息：msg                       
-当前的: current   
-小技巧：tips                        
-图标: icon   
-注释：note                          
-指南：guild   
-服务：service                       
-热点：hot
-新闻：news                          
-下载：download   
-投票：vote                          
-合作伙伴：partner   
-友情链接：link                      
-版权：copyright   </code></pre><h2 id="3-class的命名"><a href="#3-class的命名" class="headerlink" title="3.class的命名:"></a>3.class的命名:</h2><h3 id="1-颜色-使用颜色的名称或者16进制代码-如"><a href="#1-颜色-使用颜色的名称或者16进制代码-如" class="headerlink" title="(1)颜色:使用颜色的名称或者16进制代码,如"></a>(1)颜色:使用颜色的名称或者16进制代码,如</h3><pre><code>.red { color: red; }   
-.f60 { color: #f60; }   
-.ff8600 { color: #ff8600; }    </code></pre><h3 id="2-字体大小-直接使用“font-字体大小”作为名称-如"><a href="#2-字体大小-直接使用“font-字体大小”作为名称-如" class="headerlink" title="(2)字体大小,直接使用“font+字体大小”作为名称,如"></a>(2)字体大小,直接使用“font+字体大小”作为名称,如</h3><pre><code>.font12px { font-size: 12px; }   
-.font9pt {font-size: 9pt; }   </code></pre><h3 id="3-对齐样式-使用对齐目标的英文名称-如"><a href="#3-对齐样式-使用对齐目标的英文名称-如" class="headerlink" title="(3)对齐样式,使用对齐目标的英文名称,如"></a>(3)对齐样式,使用对齐目标的英文名称,如</h3><pre><code>.left { float:left; }    
-.bottom { float:bottom; }    </code></pre><h3 id="4-标题栏样式-使用“类别-功能”的方式命名-如"><a href="#4-标题栏样式-使用“类别-功能”的方式命名-如" class="headerlink" title="(4)标题栏样式,使用“类别+功能”的方式命名,如"></a>(4)标题栏样式,使用“类别+功能”的方式命名,如</h3><pre><code>.barnews { }   
-.barproduct { } </code></pre><h3 id="5-统筹CSS样式-如"><a href="#5-统筹CSS样式-如" class="headerlink" title="(5)统筹CSS样式,如"></a>(5)统筹CSS样式,如</h3><pre><code>.m10{ margin: 10px; }
-.p10{ padding: 10px; }
-.ml5{ margin-left: 5px; }
-//一般都是px为单位，其他单位只需要在尾部加上单位就好，如：.m10pt{ margin: 10pt; }</code></pre><h2 id="4-常用的-css文件命名"><a href="#4-常用的-css文件命名" class="headerlink" title="4.常用的.css文件命名"></a>4.常用的.css文件命名</h2><pre><code>主要的      master.css   
-模块        module.css   
-基本共用    base.css   
-布局，版面  layout.css   
-主题        themes.css   
-专栏        columns.css   
-文字        font.css   
-表单        forms.css   
-补丁        mend.css   
-打印        print.css</code></pre>
+<h3 id="css的语法："><a href="#css的语法：" class="headerlink" title="css的语法："></a>css的语法：</h3><p><strong>css样式</strong><br>声 明：  属性:值;<br>具体：<br>color:<br>font-size:<br>width:<br>height:<br>background:<br>font-weight:<br><strong>写法：</strong><br><strong>1：内部样式</strong><br>head标签中间，添加</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line">	选择器&#123;属性:值;属性:值;……&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>2：外部样式</strong><br>只要引用了的页面就会被渲染<br>    a.    生成单独的css文件,在head标签中添加</p>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">link</span> rel=<span class="string">"stylesheet"</span> <span class="keyword">type</span>=<span class="string">"text/css"</span> href=<span class="string">"文件路径"</span> /&gt;</span><br><span class="line"><span class="string">``</span><span class="string">`	</span></span><br><span class="line"><span class="string">b.	或者 在style标签中的第一行添加</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>		</span><br><span class="line">@<span class="keyword">import</span> url(<span class="string">"文件路径"</span>);</span><br><span class="line"><span class="string">``</span><span class="string">`			</span></span><br><span class="line"><span class="string">**3.内联样式** </span></span><br><span class="line"><span class="string">在指定标签中添加</span></span><br></pre></td></tr></table></figure>
+<p>style=”属性:值;属性:值;”</p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">内联样式（行内样式）作用一个标签</span><br><span class="line">内部样式 作用一个页面</span><br><span class="line">外部样式 作用多个页面				</span><br><span class="line"><span class="comment">**样式优先级：**</span></span><br><span class="line">内联样式 &gt; 内部样式 = 外部样式</span><br><span class="line"><span class="comment">**ps:** 作用范围越广，优先级越低。页面加载顺序从上往下，从左往右加载，后加载的覆盖先加载的</span></span><br><span class="line">			</span><br><span class="line"><span class="comment">**css选择器:**</span></span><br><span class="line">类型选择器: <span class="built-in">div</span> p a span h1 h3 ul li....</span><br></pre></td></tr></table></figure>
+<p>选择器的优先级：<br>        作用范围越大，优先级越低<br>        类型选择器 &lt; 类型选择器 &lt; id选择器</p>
+<p>类选择器(class选择器):<br>    在一个页面中可以多次出现<br>    1:给指定的标签添加属性class=”name1”<br>    2:当成选择器使用时添加.  .name1{}<br>    一个class属性可以有多个值<br>    class=”name1 name2 name3”</p>
+<p>id选择器:<br>    在一个页面相同的id值只能出现次，具有唯一性<br>    1:给指定的标签添加属性id=”name1”<br>    2:当成选择器使用时添加#   #name1{}</p>
+<ul>
+<li>通配符 匹配页面中所有的元素<pre><code>*{margin:0;padding:0;}</code></pre></li>
+</ul>
+<p>群组选择器：选择器,选择器,选择器{}<br>包含选择器（后代选择器）:选择器 选择器{}<br>伪类选择器<br>    :link{} 初始状态<br>    :visted{}访问过后的状态<br>    :hover{}鼠标悬停的状态<br>    :active{}鼠标按下的状态<br>        注意：按照以上的顺序书写</p>
+<p>选择器:hover{} 移入中间，改变自己<br>选择器:hover 选择器{} 移入父级，改变子级</p>
+<p>选择器权重：<br>    类型（元素）选择器 0001<br>    伪元素选择器 0001<br>    id选择器 0100<br>    class选择器 0010<br>    属性选择器 0010<br>    伪类选择器 0010<br>    内联选择器 1000</p>
+<p>包含选择器：选择器权重之和<br>        特殊样式设置：<br>            改变A标签的文本颜色，选择器必须选择a</p>
+<pre><code>浮动相关概括：</code></pre><p>float: 浮动;<br>    作用：让元素横排展示（必须给所有需要横排展示的元素都加浮动）<br>    left:左浮动<br>    right:右浮动<br>    none:不浮动</p>
+<pre><code>规则： 贴靠象限
+    一行容纳不下，则换行显示，如果最终还是放不下，则凑合带着
+    只占据自己内容位置大小的元素，添加浮动后（none除外）能设置宽高
+    添加浮动的元素脱离文档流（正常文档流 从上到下 从左到右）
+
+图文混排：
+    图片添加浮动，文字环绕图片</code></pre><p>清除浮动：<br>    清除浮动带来的问题<br>    问题：<br>        当父级元素没有高度时，子元素浮动，父级元素高度塌陷，引起布局混乱</p>
+<pre><code>解决方式1：
+给父级元素加高度；不灵活
+
+解决方式2：清除浮动
+    在浮动元素最后添加一个独占一行的空元素，空元素的样式威
+    clear:left/right/both
+    不断的添加空元素，造成代码冗余</code></pre><pre><code></code></pre>
     </div>
 
     
@@ -304,7 +262,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/04/15/%E6%80%BB%E7%BB%93%E5%B8%B8%E7%94%A8%E7%9A%84CSS%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/" title="总结常用的CSS命名规则">http://yoursite.com/2019/04/15/总结常用的CSS命名规则/</a>
+    <a href="http://yoursite.com/2019/05/15/CSS%E6%80%BB%E7%BB%93%E7%AF%87(2)/" title="CSS总结篇(2)">http://yoursite.com/2019/05/15/CSS总结篇(2)/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -315,7 +273,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/vv%E7%9A%84%E5%B0%8F%E7%AC%94%E8%AE%B0/" rel="tag"># vv的小笔记</a>
+              <a href="/tags/vv%E7%9A%84%E5%B0%8F%E7%AC%94%E8%AE%B0-CSS/" rel="tag"># vv的小笔记-CSS</a>
           </div>
 
         
@@ -323,10 +281,13 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2019/04/20/%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E6%96%B9%E5%BC%8F/" rel="next" title="清除浮动的方式">
-      清除浮动的方式 <i class="fa fa-chevron-right"></i>
+    <a href="/2019/05/15/CSS%E6%80%BB%E7%BB%93%E7%AF%87/" rel="prev" title="CSS总结篇">
+      <i class="fa fa-chevron-left"></i> CSS总结篇
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/05/15/CSS%E6%80%BB%E7%BB%93%E7%AF%87(3)/" rel="next" title="CSS总结篇(3)">
+      CSS总结篇(3) <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -386,7 +347,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-注释的写法"><span class="nav-number">1.</span> <span class="nav-text">1.注释的写法:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-id的命名"><span class="nav-number">2.</span> <span class="nav-text">2. id的命名:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-页面结构"><span class="nav-number">2.1.</span> <span class="nav-text">(1)页面结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-导航"><span class="nav-number">2.2.</span> <span class="nav-text">(2)导航</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-功能"><span class="nav-number">2.3.</span> <span class="nav-text">(3)功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-class的命名"><span class="nav-number">3.</span> <span class="nav-text">3.class的命名:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-颜色-使用颜色的名称或者16进制代码-如"><span class="nav-number">3.1.</span> <span class="nav-text">(1)颜色:使用颜色的名称或者16进制代码,如</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-字体大小-直接使用“font-字体大小”作为名称-如"><span class="nav-number">3.2.</span> <span class="nav-text">(2)字体大小,直接使用“font+字体大小”作为名称,如</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-对齐样式-使用对齐目标的英文名称-如"><span class="nav-number">3.3.</span> <span class="nav-text">(3)对齐样式,使用对齐目标的英文名称,如</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-标题栏样式-使用“类别-功能”的方式命名-如"><span class="nav-number">3.4.</span> <span class="nav-text">(4)标题栏样式,使用“类别+功能”的方式命名,如</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-统筹CSS样式-如"><span class="nav-number">3.5.</span> <span class="nav-text">(5)统筹CSS样式,如</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-常用的-css文件命名"><span class="nav-number">4.</span> <span class="nav-text">4.常用的.css文件命名</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#css的语法："><span class="nav-number">1.</span> <span class="nav-text">css的语法：</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
