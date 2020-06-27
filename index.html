@@ -209,104 +209,14 @@
 
       
           <p><strong>简介：</strong><br>&ensp;&ensp;&ensp;&ensp;在页面布局中常常要使用到浮动来实现元素之间的布局，然而浮动之后常常会出现各种bug。本文记录下来我使用过以及查阅资料总结下来的解决清除浮动的问题的方式，如下：</p>
-<h2 id="CSS清除浮动的8种方法以及优缺点"><a href="#CSS清除浮动的8种方法以及优缺点" class="headerlink" title="CSS清除浮动的8种方法以及优缺点"></a>CSS清除浮动的8种方法以及优缺点</h2><h5 id="产生的问题："><a href="#产生的问题：" class="headerlink" title="产生的问题："></a>产生的问题：</h5><p>&ensp;&ensp;&ensp;&ensp;浮动会使当前标签产生向上浮的效果，同时会影响到前后标签、父级标签的位置及 width height 属性。而且同样的代码，在各种浏览器中显示效果也有可能不相同，这样让清除浮动更难了。解决浮动引起的问题有多种方法，但有些方法在浏览器兼容性方面还有问题。 </p>
-<h2 id="下面总结8种清除浮动的方法"><a href="#下面总结8种清除浮动的方法" class="headerlink" title="下面总结8种清除浮动的方法"></a>下面总结8种清除浮动的方法</h2><h3 id="1-父级div定义-height"><a href="#1-父级div定义-height" class="headerlink" title="1.父级div定义 height"></a>1.父级div定义 height</h3><pre><code>&lt;style type=&quot;text/css&quot;&gt; 
-    .div1{background:#000080;border:1px solid red;/*解决代码*/height:200px;} 
-    .div2{background:#800080;border:1px solid red;height:100px;margin-top:10px} 
-    .left{float:left;width:20%;height:200px;background:#DDD} 
-    .right{float:right;width:30%;height:80px;background:#DDD} 
-&lt;/style&gt; 
-&lt;div class=&quot;div1&quot;&gt; 
-    &lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt; 
-    &lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt; 
-&lt;/div&gt; 
-&lt;div class=&quot;div2&quot;&gt; div2 &lt;/div&gt; </code></pre><p><strong>原理：</strong> 父级div手动定义height，就解决了父级div无法自动获取到高度的问题。<br><strong>优点：</strong> 简单、代码少、容易掌握<br><strong>缺点：</strong> 只适合高度固定的布局，要给出精确的高度，如果高度和父级div不一样时，会产生问题<br><strong>建议：</strong> 不推荐使用，只建议高度固定的布局时使用 </p>
-<h3 id="2-结尾处加空div标签-clear-both"><a href="#2-结尾处加空div标签-clear-both" class="headerlink" title="2.结尾处加空div标签 clear:both;"></a>2.结尾处加空div标签 clear:both;</h3><pre><code>&lt;style type=&quot;text/css&quot;&gt; 
-    .div1{background:#000080;border:1px solid red} 
-    .div2{background:#800080;border:1px solid red;height:100px;margin-top:10px} 
-    .left{float:left;width:20%;height:200px;background:#DDD} 
-    .right{float:right;width:30%;height:80px;background:#DDD} 
-    /*清除浮动代码*/ 
-    .clearfloat{clear:both;height:0;overflow:hidden;} 
-&lt;/style&gt; 
-&lt;div class=&quot;div1&quot;&gt; 
-    &lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt; 
-    &lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt; 
-    &lt;div class=&quot;clearfloat&quot;&gt;&lt;/div&gt; 
-&lt;/div&gt; 
-&lt;div class=&quot;div2&quot;&gt; div2 &lt;/div&gt; </code></pre><p><strong>原理：</strong> 添加一个空div，利用css提高的clear:both清除浮动，让父级div能自动获取到高度<br><strong>优点：</strong> 简单、代码少、浏览器支持好、不容易出现怪问题<br><strong>缺点：</strong> 不少初学者不理解原理；如果页面浮动布局多，就要增加很多空div，让人感觉很不好<br><strong>建议：</strong> 不推荐使用，但此方法是以前主要使用的一种清除浮动方法 </p>
-<h3 id="3-父级div定义-伪对象-after-和-zoom"><a href="#3-父级div定义-伪对象-after-和-zoom" class="headerlink" title="3.父级div定义 伪对象:after 和 zoom"></a>3.父级div定义 伪对象:after 和 zoom</h3><pre><code> &lt;style type=&quot;text/css&quot;&gt; 
-    .div1{background:#000080;border:1px solid red;} 
-    .div2{background:#800080;border:1px solid red;height:100px;margin-top:10px} 
-    .left{float:left;width:20%;height:200px;background:#DDD} 
-    .right{float:right;width:30%;height:80px;background:#DDD} 
-    /*清除浮动代码*/ 
-    .clearfloat:after{display:block;clear:both;content:&quot;&quot;;visibility:hidden;height:0;overflow:hidden;} 
-    .clearfloat{zoom:1} 
-&lt;/style&gt; 
-&lt;div class=&quot;div1 clearfloat&quot;&gt; 
-    &lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt; 
-    &lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt; 
-&lt;/div&gt; 
-&lt;div class=&quot;div2&quot;&gt; div2 &lt;/div&gt; </code></pre><p><strong>原理：</strong> IE8以上和非IE浏览器才支持:after，原理和方法2有点类似，zoom(IE转有属性)可解决ie6,ie7浮动问题<br><strong>优点：</strong> 浏览器支持好、不容易出现怪问题<br><strong>缺点：</strong> 代码多、不少初学者不理解原理，要两句代码结合使用才能让主流浏览器都支持。<br><strong>建议：</strong> 推荐使用，建议定义公共类，以减少CSS代码。 </p>
-<h3 id="4-父级div定义-overflow-hidden"><a href="#4-父级div定义-overflow-hidden" class="headerlink" title="4.父级div定义 overflow:hidden"></a>4.父级div定义 overflow:hidden</h3><pre><code>&lt;style type=&quot;text/css&quot;&gt; 
-    .div1{background:#000080;border:1px solid red;/*解决代码*/width:98%;overflow:hidden} 
-    .div2{background:#800080;border:1px solid red;height:100px;margin-top:10px;width:98%} 
-    .left{float:left;width:20%;height:200px;background:#DDD} 
-    .right{float:right;width:30%;height:80px;background:#DDD} 
-&lt;/style&gt; 
-&lt;div class=&quot;div1&quot;&gt; 
-    &lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt; 
-    &lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt; 
-&lt;/div&gt; 
-&lt;div class=&quot;div2&quot;&gt; div2 &lt;/div&gt; </code></pre><p><strong>原理：</strong> 必须定义width或zoom:1，同时不能定义height，使用overflow:hidden时，浏览器会自动检查浮动区域的高度<br><strong>优点：</strong> 简单、代码少、浏览器支持好<br><strong>缺点：</strong> 不能和position配合使用，因为超出的尺寸的会被隐藏。<br><strong>建议：</strong> 只推荐没有使用position或对overflow:hidden理解比较深的朋友使用。 </p>
-<h3 id="5-父级div定义-overflow-auto"><a href="#5-父级div定义-overflow-auto" class="headerlink" title="5.父级div定义 overflow:auto"></a>5.父级div定义 overflow:auto</h3><pre><code>&lt;style type=&quot;text/css&quot;&gt; 
-    .div1{background:#000080;border:1px solid red;/*解决代码*/width:98%;overflow:auto} 
-    .div2{background:#800080;border:1px solid red;height:100px;margin-top:10px;width:98%} 
-    .left{float:left;width:20%;height:200px;background:#DDD} 
-    .right{float:right;width:30%;height:80px;background:#DDD} 
-&lt;/style&gt; 
-&lt;div class=&quot;div1&quot;&gt; 
-    &lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt; 
-    &lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt; 
-&lt;/div&gt; 
-&lt;div class=&quot;div2&quot;&gt; div2 &lt;/div&gt; </code></pre><p><strong>原理：</strong> 必须定义width或zoom:1，同时不能定义height，使用overflow:auto时，浏览器会自动检查浮动区域的高度<br><strong>优点：</strong> 简单、代码少、浏览器支持好<br><strong>缺点：</strong> 内部宽高超过父级div时，会出现滚动条。<br><strong>建议：</strong> 不推荐使用，如果你需要出现滚动条或者确保你的代码不会出现滚动条就使用吧。 </p>
-<h3 id="6-父级div-也一起浮动"><a href="#6-父级div-也一起浮动" class="headerlink" title="6.父级div 也一起浮动"></a>6.父级div 也一起浮动</h3><pre><code>&lt;style type=&quot;text/css&quot;&gt; 
-    .div1{background:#000080;border:1px solid red;/*解决代码*/width:98%;margin-bottom:10px;float:left} 
-    .div2{background:#800080;border:1px solid red;height:100px;width:98%;/*解决代码*/clear:both} 
-    .left{float:left;width:20%;height:200px;background:#DDD} 
-    .right{float:right;width:30%;height:80px;background:#DDD} 
-&lt;/style&gt; 
-&lt;div class=&quot;div1&quot;&gt; 
-    &lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt; 
-    &lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt; 
-&lt;/div&gt; 
-&lt;div class=&quot;div2&quot;&gt; div2 &lt;/div&gt; </code></pre><p><strong>原理：</strong> 所有代码一起浮动，就变成了一个整体<br><strong>优点：</strong> 没有优点<br><strong>缺点：</strong> 会产生新的浮动问题。<br><strong>建议：</strong> 不推荐使用。 </p>
-<h3 id="7-父级div定义-display-table"><a href="#7-父级div定义-display-table" class="headerlink" title="7.父级div定义 display:table"></a>7.父级div定义 display:table</h3><pre><code>&lt;style type=&quot;text/css&quot;&gt; 
-    .div1{background:#000080;border:1px solid red;/*解决代码*/width:98%;display:table;margin-bottom:10px;} 
-    .div2{background:#800080;border:1px solid red;height:100px;width:98%;} 
-    .left{float:left;width:20%;height:200px;background:#DDD} 
-    .right{float:right;width:30%;height:80px;background:#DDD} 
-&lt;/style&gt; 
-&lt;div class=&quot;div1&quot;&gt; 
-    &lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt; 
-    &lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt; 
-&lt;/div&gt; 
-&lt;div class=&quot;div2&quot;&gt;div2&lt;/div&gt; </code></pre><p><strong>原理：</strong> 将div属性变成表格<br><strong>优点：</strong> 没有优点<br><strong>缺点：</strong> 会产生新的未知问题。<br><strong>建议：</strong> 不推荐使用，只作了解。 </p>
-<h3 id="8-结尾处加-br标签-clear-both"><a href="#8-结尾处加-br标签-clear-both" class="headerlink" title="8.结尾处加 br标签 clear:both"></a>8.结尾处加 br标签 clear:both</h3><pre><code>&lt;style type=&quot;text/css&quot;&gt; 
-    .div1{background:#000080;border:1px solid red;margin-bottom:10px;zoom:1} 
-    .div2{background:#800080;border:1px solid red;height:100px} 
-    .left{float:left;width:20%;height:200px;background:#DDD} 
-    .right{float:right;width:30%;height:80px;background:#DDD} 
-    .clearfloat{clear:both} 
-&lt;/style&gt; 
-&lt;div class=&quot;div1&quot;&gt; 
-    &lt;div class=&quot;left&quot;&gt;Left&lt;/div&gt; 
-    &lt;div class=&quot;right&quot;&gt;Right&lt;/div&gt; 
-    &lt;br class=&quot;clearfloat&quot; /&gt; 
-&lt;/div&gt; 
-&lt;div class=&quot;div2&quot;&gt;div2 &lt;/div&gt; </code></pre><p><strong>原理：</strong> 父级div定义zoom:1来解决IE浮动问题，结尾处加 br标签 clear:both<br><strong>建议：</strong> 不推荐使用。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/04/20/%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E7%9A%84%E6%96%B9%E5%BC%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
