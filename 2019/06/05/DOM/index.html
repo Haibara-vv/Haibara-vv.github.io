@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/./images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/./images/3232red.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/./images/1616red.png">
+  <link rel="mask-icon" href="/./images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="简介：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;对于DOM一直脑瓜子嗡嗡的，今天决定结合资料好好缕缕，参考文章：https:&#x2F;&#x2F;www.zhihu.com&#x2F;question&#x2F;34219998">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DOM">
+<meta property="og:url" content="http://yoursite.com/2019/06/05/DOM/index.html">
+<meta property="og:site_name" content="VV&#39;s Blog">
+<meta property="og:description" content="简介：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;对于DOM一直脑瓜子嗡嗡的，今天决定结合资料好好缕缕，参考文章：https:&#x2F;&#x2F;www.zhihu.com&#x2F;question&#x2F;34219998">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/2019/06/05/DOM/img/%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B.jpg">
+<meta property="article:published_time" content="2019-06-05T11:58:52.000Z">
+<meta property="article:modified_time" content="2019-06-05T12:45:11.000Z">
+<meta property="article:author" content="VV(刘威)">
+<meta property="article:tag" content="vv的小笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2019/06/05/DOM/img/%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B.jpg">
+
+<link rel="canonical" href="http://yoursite.com/2019/06/05/DOM/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>DOM | VV's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">VV's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">记录每天脱落的头发😢</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/05/DOM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/vv.jpg">
+      <meta itemprop="name" content="VV(刘威)">
+      <meta itemprop="description" content="有人夜里看海，有人夜里秃头">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VV's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          DOM
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-06-05 19:58:52 / 修改时间：20:45:11" itemprop="dateCreated datePublished" datetime="2019-06-05T19:58:52+08:00">2019-06-05</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><strong>简介：</strong><br>&ensp;&ensp;&ensp;&ensp;对于DOM一直脑瓜子嗡嗡的，今天决定结合资料好好缕缕，参考文章：<a href="https://www.zhihu.com/question/34219998" target="_blank" rel="noopener">https://www.zhihu.com/question/34219998</a></p>
+<a id="more"></a>
+<h2 id="DOM文档对象模型（Document-Object-Model）"><a href="#DOM文档对象模型（Document-Object-Model）" class="headerlink" title="DOM文档对象模型（Document Object Model）"></a>DOM文档对象模型（Document Object Model）</h2><h3 id="什么是DOM？"><a href="#什么是DOM？" class="headerlink" title="什么是DOM？"></a>什么是DOM？</h3><p>  先来甩上来某百科的定义：是W3C组织推荐的处理可扩展置标语言的标准编程接口。它是一种与平台和语言无关的应用程序接口(API),它可以动态地访问程序和脚本,更新其内容、结构和www文档的风格(目前,HTML和XML文档是通过说明部分定义的)。文档可以进一步被处理，处理的结果可以加入到当前的页面。DOM是一种基于树的API文档，它要求在处理过程中整个文档都表示在存储器中。另外一种简单的API是基于事件的SAX，它可以用于处理很大的XML文档，由于大，所以不适合全部放在存储器中处理。</p>
+<p>  某百科总是如此优秀，我本来是一颗懵逼果，硬是给我构建了一棵懵逼树，还把我挂了上去（手动滑稽）。</p>
+<p>  下面我来说说我的理解：</p>
+<p>  <strong>DOM</strong>就是文档对象模型（是不是很偷懒，标题就是），那么问题来了，什么是文档对象模型呢？</p>
+<p>  首先，我们的HTML的文档页面（document）是基础，当一个页面在浏览器加载出来的时候，DOM就已经生成了。它的使命也就油然而生：把网页文档转化为一个文档对象，主要处理网页的内容。</p>
+<p>  上一段代码帮助理解：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>我是标题<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>我是div<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>我是h1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>我是文本<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这段代码会在浏览器生成一棵倒着生长的树，也就是常说的DOM树。如下：</p>
+<p><img src="./img/%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B.jpg" alt="avatar"></p>
+<p>文档对象模型就是上述这种模型，这个节点树，也叫DOM树。只要是html页面就离不开这个模型。</p>
+<h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><p>讨论完了什么是DOM，下面来看看节点。<strong>节点就是网络中的一个连接点。</strong></p>
+<p>根据 W3C 的 HTML DOM 标准，HTML里的所有内容都是节点：</p>
+<ul>
+<li>整个文档是一个文档节点</li>
+<li>每个 HTML 元素是元素节点</li>
+<li>HTML 元素内的文本是文本节点</li>
+<li>每个 HTML 属性是属性节点</li>
+<li>注释是注释节点</li>
+</ul>
+<p>简单说说<strong>元素节点、文本节点以及属性节点</strong>：</p>
+<p><strong>元素节点：</strong> 本身部包含内容，但是可以包含其他的节点。</p>
+<p><strong>文本节点：</strong> 一般被包含在元素节点内部，形成了页面文档的主要内容。</p>
+<p><strong>属性节点：</strong> 用于对元素做出一些具体的描述。</p>
+<h3 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h3><h4 id="获取元素节点"><a href="#获取元素节点" class="headerlink" title="获取元素节点"></a>获取元素节点</h4><p>  获取元素节点的方式：<strong>id选择器、类名选择器、标签名选择器以及 html5 新增的css选择器</strong></p>
+<h5 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h5><p>  <strong>方式：</strong> document.getElementById(“id名”)</p>
+<p>  getElementById()是document对象特有的函数，传入元素的id名，返回一个对象。这个对象就是传入id对应的节点。</p>
+<h5 id="class选择器"><a href="#class选择器" class="headerlink" title="class选择器"></a>class选择器</h5><p>  <strong>方式：</strong> document.getElementsByClassName(“class名”)</p>
+<p>  getElementsByClassName()是传入一个class名，返回一个对象数组。</p>
+<h5 id="标签名选择器"><a href="#标签名选择器" class="headerlink" title="标签名选择器"></a>标签名选择器</h5><p>  <strong>方式：</strong> document.getElementsByTagName(“标签名”)</p>
+<p>  getElementsByTagName()是传入标签名(li、div……),返回一个对象数组。</p>
+<h5 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h5><p>  <strong>方式：</strong> document.querySelector(“#id”)(选择id名为id的节点)<br>  document.querySelectorAll(“.class”)(选择class名为class的所有节点)</p>
+<p>  querySelector()返回一个节点，多个匹配之后返回第一个节点。<br>  querySelectorAll()返回节点列表。</p>
+<h4 id="获取属性"><a href="#获取属性" class="headerlink" title="获取属性"></a>获取属性</h4><h5 id="getAttribute"><a href="#getAttribute" class="headerlink" title="getAttribute"></a>getAttribute</h5><p>  getAttribute()是属于节点对象的方法，用于获取节点的属性。</p>
+<p>  <strong>方式：</strong><br>  <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> oImg = <span class="built_in">document</span>.getElementById(<span class="string">"img"</span>) <span class="comment">//获取页面上id为img的节点</span></span><br><span class="line"><span class="keyword">var</span> oTitle = oImg.getAttribute(<span class="string">"title"</span>) <span class="comment">//获取img节点上的title属性</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="setAttribute"><a href="#setAttribute" class="headerlink" title="setAttribute()"></a>setAttribute()</h5><p>  setAttribute()用于修改节点的属性。第一个参数是属性名，第二个参数是修改的属性值。</p>
+<p>  <strong>方式：</strong><br>  <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> oImg = <span class="built_in">document</span>.getElementById(<span class="string">"img"</span>) <span class="comment">//获取页面上id为img的节点</span></span><br><span class="line">oImg.setAttribute(<span class="string">"title"</span>,<span class="string">"picture"</span>) <span class="comment">//修改img节点上的title属性</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="获取其他节点"><a href="#获取其他节点" class="headerlink" title="获取其他节点"></a>获取其他节点</h4><p>  <strong>getElementsByName：</strong> 通过name属性获取节点。</p>
+<p>  <strong>document.documentElement：</strong> 专门获取html标签的。</p>
+<p>  <strong>document.body：</strong> 获取body标签。</p>
+<p>  <strong>childNodes：</strong> 用来获取一个节点的所有子节点，得到一个包含所有子节点的数组。他会把换行和空格也当成是节点信息，为了不显示不必须的换行的空格，我们如果要使用childNodes就必须进行必要的过滤。通过正则表达式式取掉不必要的信息。</p>
+<p>  <strong>children：</strong> 获取子元素，返回数组，按照数组的访问形式即可。</p>
+<p>  <strong>firstChild/lastChild：</strong> 获取第一个子元素(最后一个)，和ChildNodes类似，需要过滤。</p>
+<p>  <strong>firstElementChild/lastElementChild：</strong> 获取第一个子元素(最后一个)，不用过滤。</p>
+<p>  <strong>parentNode/parentElement：</strong> (W3C/ie 标准)获取当前节点的父节点，如果没有父节点返回null。</p>
+<p>  <strong>offsetParent：</strong> 获取所有父亲节点</p>
+<p>  <strong>previousSibling/nextSibling：</strong> 获取上一个兄弟节点(下一个)，会匹配字符，需要过滤。</p>
+<p>  <strong>previousElementSibling/nextElementSibling：</strong> 获取上一个兄弟节点(下一个)，直接匹配节点，不需要过滤。</p>
+<p>  <strong>nodeType：</strong> 这个属性是一个数值，让我们可以知道正在处理哪种类型的节点。 元素节点：1；属性节点：2；文本节点：3。</p>
+<p>  <strong>nodeValue：</strong> 文本节点的值。</p>
+<p>  <strong>document.write()：</strong> 把字符串插入到文档中。</p>
+<p>  <strong>innerHTML()：</strong> 读写html的内容。</p>
+<p>  <strong>createElement()：</strong> 创建元素节点。参数是标签名。不在DOM树上，无法显示，需要插入。</p>
+<p>  <strong>createTextNode()：</strong> 创建文本节点用于放文本内容。不在DOM树上。</p>
+<p>  <strong>appendChild()：</strong> 将新创建的节点插入到DOM树，使之成为插入节点的子节点。</p>
+<p>  <strong>insetBefore()：</strong> 在已有元素前插入新的元素。语法如下：</p>
+  <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">parentElement.insert<span class="constructor">Before(<span class="params">newElement</span>, <span class="params">targetElement</span>)</span>;</span><br><span class="line"><span class="comment">//该方法需要知道新元素、目标元素以及父元素。</span></span><br></pre></td></tr></table></figure>
+
+<p>  <strong>removeChild()</strong> 删除一个节点，返回被删除的节点。</p>
+<p>  <strong>replaceChild(newNode,oldNode)</strong> 替换节点，第一个参数是要插入的节点，第二个参数是被替换的节点。返回被替换的节点。</p>
+<p>  以上只是个人结合资料浅显的总结。如有不对，欢迎指点！</p>
+
+    </div>
+
+    
+    
+    
+    <div>
+    
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+    
+  </div>
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>VV(刘威)
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/06/05/DOM/" title="DOM">http://yoursite.com/2019/06/05/DOM/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/vv%E7%9A%84%E5%B0%8F%E7%AC%94%E8%AE%B0/" rel="tag"># vv的小笔记</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/05/28/JS%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%A7%84%E8%8C%83/" rel="prev" title="JS基本数据类型和规范">
+      <i class="fa fa-chevron-left"></i> JS基本数据类型和规范
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/06/05/Ajax%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%B0/" rel="next" title="Ajax使用小记">
+      Ajax使用小记 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM文档对象模型（Document-Object-Model）"><span class="nav-number">1.</span> <span class="nav-text">DOM文档对象模型（Document Object Model）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是DOM？"><span class="nav-number">1.1.</span> <span class="nav-text">什么是DOM？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#节点"><span class="nav-number">1.2.</span> <span class="nav-text">节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#节点操作"><span class="nav-number">1.3.</span> <span class="nav-text">节点操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#获取元素节点"><span class="nav-number">1.3.1.</span> <span class="nav-text">获取元素节点</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#id选择器"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">id选择器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#class选择器"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">class选择器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#标签名选择器"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">标签名选择器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#CSS选择器"><span class="nav-number">1.3.1.4.</span> <span class="nav-text">CSS选择器</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取属性"><span class="nav-number">1.3.2.</span> <span class="nav-text">获取属性</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#getAttribute"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">getAttribute</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#setAttribute"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">setAttribute()</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取其他节点"><span class="nav-number">1.3.3.</span> <span class="nav-text">获取其他节点</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="VV(刘威)"
+      src="/images/vv.jpg">
+  <p class="site-author-name" itemprop="name">VV(刘威)</p>
+  <div class="site-description" itemprop="description">有人夜里看海，有人夜里秃头</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:527133204@qq.com" title="E-Mail → mailto:527133204@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">VV(刘威)</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,0' opacity='0.5' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
